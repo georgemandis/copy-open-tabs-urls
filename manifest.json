@@ -1,0 +1,21 @@
+{
+  "name": "Copy Open Tab URLs",
+  "version": "1.0",  
+  "description": "Copy URLs for all your open tabs to the clipbooard",
+  "author": "George Mandis <george@mand.is>",
+  "homepage_url": "https://george.mand.is",  
+  "permissions": [
+    "tabs",
+    "contextMenus"    
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },  
+  "manifest_version": 2
+}
