@@ -1,24 +1,21 @@
 {
-  "name": "Copy Open Tab URLs",
-  "version": "1.0.4",  
-  "description": "Copy URLs for all your open tabs to the clipbooard",
+  "name": "Copy URLs",
+  "version": "2.0.0",
+  "description": "Quickly copy URLs from your open tabs, links within a page and more to the clipboard",
   "author": "George Mandis <george@mand.is>",
-  "homepage_url": "https://george.mand.is/hire",  
+  "homepage_url": "https://george.mand.is/hire",
   "permissions": [
-    "tabs",
-    "contextMenus"    
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "tabs"
   ],
   "icons": {
-    "128": "icon.png"
+    "128": "icon.png"    
   },
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
+  "action": {},
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },  
-  "manifest_version": 2
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3
 }
