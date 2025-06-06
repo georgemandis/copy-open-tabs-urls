@@ -1,0 +1,11 @@
+{
+  "name": "copy-urls-extension",
+  "version": "2.0.1",
+  "description": "Chrome extension to copy URLs from open tabs, links within a page and more",
+  "scripts": {
+    "build": "npx crx3 . -o copy-urls-extension.crx",
+    "prepare": "zip copy-open-tab-urls.zip ./*"
+  },
+  "author": "George Mandis <george@mand.is>",
+  "license": "MIT"
+}
