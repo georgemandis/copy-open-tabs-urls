@@ -14,6 +14,10 @@ function copyURLsToClipboard(urls) {
   navigator.clipboard.writeText(urls.join("\n"));
 }
 
+function removeDuplicateURLs(urls) {
+  return [...new Set(urls)];
+}
+
 function getLinksOnPage() {
   return Array.from(document.links).map(a => a.href);
 }
@@ -51,7 +55,7 @@ async function getURLs(req, sender) {
   chrome.scripting.executeScript({
     target: { tabId: activeTab.id },
     function: copyURLsToClipboard,
-    args: [urls],
+    args: [removeDuplicateURLs(urls)],
   });
 
 }
